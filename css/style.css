@@ -244,3 +244,279 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+/* MOBILE SCREEN */
+@media screen 
+
+
+/* Custom styles for Metrolics website */
+
+* {
+    box-sizing: border-box;
+}
+
+.page-grid {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer";
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+    margin: 100px;
+}
+
+footer {
+    grid-area: footer;
+    background: #0E2E4E;
+    color: #fff;
+    padding: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.header-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-bar ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    list-style: none;
+}
+
+.hero-image-wrapper img {
+    background-image: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab {
+    width: fit-content;
+    height: auto;
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    background: blue;
+    color: black;
+}
+
+/* Individual tab colors */ 
+.home { 
+    background: #4CAF50; /* green */ 
+} 
+    
+.portfolio { 
+    background: #FF9800;  
+} 
+
+.blog { 
+    background: #F44336;  
+} 
+
+.quo { 
+    background: #00BCD4; 
+} 
+
+.chat { 
+    background: #3F51B5; 
+}
+
+/* Service Section*/
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "heading heading heading heading"
+        "offer1 offer2 offer3 offer4";
+    gap: 30px;
+    justify-items: center; 
+    text-align: center;
+}
+
+.services-grid p {
+    text-align: justify;
+}
+.services-grid .heading {
+    grid-area: heading;
+
+}
+
+.services-grid .offer1 {
+    grid-area: offer1;
+}
+
+.services-grid .offer2 {
+    grid-area: offer2;
+}
+
+.services-grid .offer3 {
+    grid-area: offer3;
+}
+
+.services-grid .offer4 {
+    grid-area: offer4;
+}
+
+
+/* What's Up Lately? Section */
+.latest-work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.latest-work .work-container {
+    display: flex;
+    justify-items: space-between;
+    position: relative;
+    gap: 15px;
+}
+
+.work-container .container {
+    background: grey;
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.container .date-badge {
+    position: absolute;
+    background: #D8605F;
+    color: #fff;
+    font-size: 17px;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work-container .date-text {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.work-container .post-info-badge {
+    position: absolute;
+    bottom: 0;
+    background: #1596BD;
+    color: #fff;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    font-size: 22px;
+}
+
+/* Section 3 */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-content: space-evenly;
+    gap: 15px;
+}
+
+.img-container img {
+    width: 400px;
+    height: 400px;
+    background-color: #D8605F;
+}
+
+.past-clients-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-content: space-evenly;
+    gap: 30px;
+}
+
+.past-clients-grid img {
+    width: 300px;
+    height: 200px;
+    background-color: #D8605F;
+}
+
+/* Footer */
+.about-alf {
+    display: flex;
+    gap: 40px;
+    margin: 50px;
+}
+
+.about-alf img {
+    width: 500px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.line {
+    margin: 0 0 30px;
+    width: 70%;
+    color: whitelight;
+    border-top: 1px solid #fff;
+}
+
+.footer-four-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.footer-about-us {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer Instagram */
+.instagram-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.extra-small-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-content: space-evenly;
+    gap: 15px;
+}
+
+.instagram-wrapper img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    background-color: grey;
+}
+
+.social-icons-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-icons-wrapper img {
+    width: 40px;
+    height: 40px;
+    background-color: grey;
+}   
