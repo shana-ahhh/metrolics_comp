@@ -25,7 +25,6 @@
    ========================================================================== */
 /* 1.1 Page Rendering Defaults */
 html {
-    color: #222;
     font-size: 1em;
     line-height: 1.4;
 }
@@ -147,16 +146,22 @@ p {
 /* ==========================================================================
    2. LAYOUT
    ========================================================================== */
-/* Helper to display empty layout containers */
 div,
 main,
 section,
-footer,
-header {
+footer {
     outline: 1px solid #ccc;
     min-height: 1rem;
     padding: 1rem;
 }
+
+.site-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
 
 /* 2.1 Core layout */
 .row {
@@ -177,6 +182,62 @@ header {
     font-weight: 600;
     letter-spacing: 0.04rem;
 }
+
+.header-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-header {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Navigation Bar */
+.nav-bar {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: flex-end;
+    padding: 0.8125rem 0.9375rem;
+    color: white;
+    font-family: Ubuntu, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.nav-bar a {
+    color: white;
+}
+
+#nav-home { 
+    background-color: #25C389; 
+}
+
+#nav-portfolio { 
+    background-color: #FFB901; 
+}
+
+#nav-blog { 
+    background-color: #DE6262; 
+}
+
+#nav-quo-vadis { 
+    background-color: #19B2DE; 
+}
+
+#nav-lets-chat { 
+    background-color: #265787; 
+}
+
 
 .highlighted-text {
     color: #1eafde;
@@ -219,8 +280,17 @@ header {
     }
 }
 
-/* 2.3 medium and up */
+/* 2.3 Medium and up */
 @media screen and (min-width: 40em) {
+    .site-header {
+        flex-direction: column;
+    }
+
+    .nav-bar {
+        display: flex;
+        width: 100%;
+    }
+
     .row {
         max-width: 70rem;
         column-gap: 1.5rem;
@@ -234,8 +304,19 @@ header {
         row-gap: 0.5rem;
     }
 
+    .m-col-2 { grid-template-columns: 1fr 1fr; }
+    .m-col-3 { grid-template-columns: repeat(3, 1fr); }
+    .m-col-4 { grid-template-columns: repeat(4, 1fr); }
+    .m-col-5 { grid-template-columns: repeat(5, 1fr); }
+    .m-1-2  { grid-template-columns: 1fr 2fr; }
+}
+
+
+
+/* 2.4 Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
     .m-col-2 {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .m-col-3 {
@@ -253,10 +334,7 @@ header {
     .m-1-2 {
         grid-template-columns: 1fr 2fr;
     }
-}
 
-/* 2.4 Medium only */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
     .m-row-span {
         grid-column-start: 1;
         grid-column-end: -1;
@@ -267,37 +345,36 @@ header {
     }
 }
 
-/* 2.5 large screens and up 2.6 Large only */
+/* 2.5 Large screens and up */
 @media screen and (min-width: 64em) {
-    .l-col-2 {
-        grid-template-columns: 1fr 1fr;
+    .site-header {
+        flex-direction: row;
+        align-items: stretch;
     }
 
-    .l-col-3 {
-        grid-template-columns: repeat(3, 1fr);
+    .logo-wrapper {
+        flex: 0 0 auto;
     }
 
-    .l-col-4 {
-        grid-template-columns: repeat(4, 1fr);
+    .nav-bar {
+        flex: 1;
     }
 
-    .l-col-5 {
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-    .l-col-6 {
-        grid-template-columns: repeat(6, 1fr);
-    }
+    .l-col-2 { grid-template-columns: repeat(2, 1fr); }
+    .l-col-3 { grid-template-columns: repeat(3, 1fr); }
+    .l-col-4 { grid-template-columns: repeat(4, 1fr); }
+    .l-col-5 { grid-template-columns: repeat(5, 1fr); }
+    .l-col-6 { grid-template-columns: repeat(6, 1fr); }
 
     .l-row-span {
-        grid-column-start: 1;
-        grid-column-end: -1;
+        grid-column: 1 / -1;
     }
 
     .l-hide {
         display: none;
     }
 }
+
 
 /* .page-grid {
     display: grid;
@@ -669,11 +746,6 @@ h1 {
         /* Black prints faster */
         box-shadow: none !important;
         text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
     }
 
     a[href]::after {
