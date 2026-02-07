@@ -487,14 +487,115 @@ header {
 }
 
 
-
-
 /* ==================== POSTS/BLOG SECTION ==================== */
+/* Latest posts section header */
+.latest {
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.latest h2 {
+    font-size: 2.125rem;
+}
+
+/* Subtitle styling */
+.sub {
+    color: #777;
+    margin-bottom: 3.125rem;
+}
+
+/* Posts grid - 3 columns on desktop */
+.posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875rem;
+}
+
+/* Individual post card */
+.post {
+    background: white;
+    text-align: left;
+}
+
+/* Post image container with overflow hidden for border-radius */
+.post-img {
+    position: relative;
+    overflow: hidden;
+    max-height: 25rem;
+}
+
+.post-img img {
+    width: 100%;
+    display: block;
+    border-radius: 2px 2px 0 0;
+    transition: transform 0.4s;
+}
+
+/* Date badge in top-left corner */
+.date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 2px 0 0 0;
+    background: #d85c5c;
+    color: white;
+    padding: 0.5rem 0.625rem;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.day {
+    font-size: 1.125rem;
+    font-weight: bold;
+    display: block;
+}
+
+/* Post info bar with blue background */
+.post-info {
+    background: #3bb3da;
+    color: white;
+    padding: 0.625rem 1.125rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 2px 2px;
+}
+
+.post-info h4 {
+    margin: 0;
+    font-size: 0.9375rem;
+}
+
+.post-info span {
+    font-size: 0.75rem;
+}
+
+/* Icon box in post info */
 .square {
     width: 1.875rem;
     height: 1.875rem;
     background: rgba(0, 0, 0, 0.15);
 }
+
+/* ==================== POSTS RESPONSIVE - TABLET ==================== */
+
+
+
+
+
+
+
+
+/* ==================== POSTS RESPONSIVE - MOBILE ==================== */
+
+
+
+
+
+
+
+/* ==================== WORKS/PORTFOLIO SECTION ==================== */
+
 
 /* Footer */
 footer h2,
