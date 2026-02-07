@@ -27,71 +27,115 @@
 	<link type="image/svg+xml" href="img/Metrolics_logo.svg" rel="icon">
 </head>
 <body>
-	<div class="logo-wrapper">
-		<p>Metrolics</p>
-		<img class="card" src="img/Metrolics_logo.svg" alt="Metrolics Logo">
-	</div>
-	<header class="header-grid s-hide">
-		<nav class="nav-bar">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="#">Portfolio</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Quo Vadis?</a></li>
-				<li><a href="#">Let's Chat</a></li>
+	<header class="header">
+		<a href="#" class="logo">
+			Metrolics
+			<img src="img/Metrolics_logo.svg" alt="Metrolics Logo" />
+		</a>
+		<nav>
+			<ul class="nav-menu">
+				<li class="has-dropdown"><a href="#">Home</a></li>
+				<li class="has-dropdown"><a href="#">Portfolio</a></li>
+				<li class="has-dropdown"><a href="#">Blog</a></li>
+				<li class="has-dropdown"><a href="#">Quo Vadis?</a></li>
+				<li class="has-dropdown"><a href="#">Let's Chat</a></li>
 			</ul>
 		</nav>
-		<div class="hero-image-wrapper">
-			<img src="#" alt="#">
-			<div class="tab-container">
-				<div class="blue-bar tab">
-					<p>MetroStyle</p>
-				</div>
-				<div class="red-bar tab">
-					<p>Quick on the Feet</p>
-				</div>
-				<div class="yellow-bar tab">
-					<p>Metro Styling reinvented</p>
-				</div>
-			</div>
-		</div>
-	</header>
+    </header>
 	<main>
-		<h1>Hi folks! We are the <span class="highlighted-text">Metrolics</span> design studio. With our help, the sky's the limit to express your creativity!</h1>
-		<section>
-			<div>
-				<h2>Things That We Do</h2>
-				<h3>Ask us what we can do for you</h3>
-			</div>
-			<div class="horizontal-container">
-				<img class="card card--web" src="img/lightbulb.svg" alt="Web Solutions Icon">
-				<div>
-					<h4>Web Solutions</h4>
-					<p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. We are confident you will be pleased with the results.</p>
+		<section class="hero-outer">
+			<div class="hero">
+			<button class="hero-btn hero-btn--left" aria-label="Previous">
+				&#10094;
+			</button>
+
+			<div class="hero-content">
+				<div class="hero-text">
+				<span class="tag tag-blue">Metro Style</span>
+				<span class="tag tag-red">Quick on the feet</span>
+				<span class="tag tag-yellow">Metro Styling reinvented</span>
 				</div>
 			</div>
-			<div class="horizontal-container">
-				<img class="card card--photo" src="img/camera_alt.svg" alt="Photography Icon">
-				<div>
-					<h4>Photography</h4>
-					<p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. We are confident you will be pleased with the results.</p>
-				</div>
+
+			<button class="hero-btn hero-btn--right" aria-label="Next">
+				&#10095;
+			</button>
 			</div>
-			<div class="horizontal-container">
-				<img class="card card--app" src="img/touch_app.svg" alt="App Development Icon">
-				<div>
-					<h4>App Development</h4>
-					<p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. We are confident you will be pleased with the results.</p>
+		</section>
+		<section class="about container">
+			<h1 class="about-title">
+			Hi folks! We are <span>Metrolics</span> design studio.<br />
+			With our help, the sky's the limit to express your creativity!
+			</h1>
+
+				<div class="service-text">
+					<h2>Things That We Do</h2>
+					<p>Ask us what we can do for you</p>
 				</div>
-			</div>
-			<div class="horizontal-container">
-				<img class="card card--ux" src="img/draw.svg" alt="UX Design Icon">
-				<div>
-					<h4>UX Design</h4>
-					<p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. We are confident you will be pleased with the results.</p>
+				<div class="services">
+				<div class="service">
+					<div class="icon yellow">
+					<img src="img/lightbulb.svg" alt="Web Solutions" />
+					</div>
+					<div class="service-text">
+					<h3>Web Solutions</h3>
+					<p>
+						We are a fairly small, flexible design studio that designs for
+						print and web. We work flexibly with our clients to fulfill
+						their design needs.
+					</p>
+					</div>
+				</div>
+
+				<div class="service">
+					<div class="icon green">
+					<img src="img/camera_alt.svg" alt="Photography" />
+					</div>
+					<div class="service-text">
+					<h3>Photography</h3>
+					<p>
+						We are a fairly small, flexible design studio that designs for
+						print and web. We work flexibly with our clients to fulfill
+						their design needs.
+					</p>
+					</div>
+				</div>
+
+				<div class="service">
+					<div class="icon red">
+					<img src="img/touch_app.svg" alt="App Development" />
+					</div>
+					<div class="service-text">
+					<div class="service-text">
+						<h3>App Development</h3>
+
+						<p>
+						We are a fairly small, flexible design studio that designs for
+						print and web. We work flexibly with our clients to fulfill
+						their design needs.
+						</p>
+					</div>
+					</div>
+				</div>
+
+				<div class="service">
+					<div class="icon blue">
+					<img src="img/draw.svg" alt="UX Design" />
+					</div>
+					<div class="service-text">
+					<h3>UX Design</h3>
+					<p>
+						We are a fairly small, flexible design studio that designs for
+						print and web. We work flexibly with our clients to fulfill
+						their design needs.
+					</p>
+					</div>
 				</div>
 			</div>
 		</section>
+
+
+
 		<section class="vertical-container">
 			<h2>What's Up Lately?</h2>
 			<h3>Read up on our latest work</h3>
