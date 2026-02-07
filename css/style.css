@@ -595,6 +595,76 @@ header {
 
 
 /* ==================== WORKS/PORTFOLIO SECTION ==================== */
+/* Works section header */
+.works {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.works h2 {
+    font-size: 1.875rem;
+    margin-bottom: 0.625rem;
+}
+
+.works .sub {
+    color: #777;
+    margin-bottom: 3.125rem;
+}
+
+/* Portfolio grid - 3 columns on desktop */
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875rem;
+}
+
+/* Portfolio item with overflow hidden for smooth hover effect */
+.work-item {
+    overflow: hidden;    
+    position: relative;  
+    border-radius: 3px;
+}
+
+.work-item img {
+    width: 100%;
+    height: 14.375rem;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Overlay on hover with blue background */
+.work-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(39, 179, 218, 0.9);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: flex-end;
+    padding: 1.25rem;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+/* Show overlay on item hover */
+.work-item:hover .work-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==================== WORKS RESPONSIVE - TABLET ==================== */
+
+
+
+
+
+/* ==================== WORKS RESPONSIVE - MOBILE ==================== */
+
+
+
 
 
 /* Footer */
