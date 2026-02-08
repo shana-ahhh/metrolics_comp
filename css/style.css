@@ -482,3 +482,105 @@ h3 {
 .offers {
   margin-bottom: 5rem;
 }
+
+/* What's Up Lately? */
+
+.latest-work {
+  margin-top: 3rem;
+}
+
+.work-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.work-container .container:first-child {
+  grid-column: 1 / -1;
+}
+
+.container {
+  position: relative;
+}
+
+.container img {
+  width: 100%;
+  display: block;
+}
+
+/* Date Label */
+.date-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #de6262;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  z-index: 2;
+}
+
+.date-text {
+  color: #fff;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  display: block;
+  line-height: 1;
+}
+
+/* Post Info Footer */
+
+.post-info-badge {
+  background: #19b2de;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.post-info-badge h4 {
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: left;
+  margin: 0;
+}
+
+.post-info-badge p {
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 400;
+  text-align: left;
+  margin: 0.25rem 0 0;
+}
+
+.post-info-badge .box {
+  width: 2.25rem;
+  height: 2.25rem;
+  background: #0e6f8f;
+}
+
+/* Best Work. Period */
+.best-work {
+  margin: 4rem 0;
+}
+
+/* image grid */
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* images */
+.img-container img {
+  width: 100%;
+  display: block;
+}
+
+/* _______________ */
