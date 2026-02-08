@@ -288,3 +288,61 @@ textarea {
     page-break-after: avoid;
   }
 }
+/* Banner Image and buttons */
+.hero-image-wrapper {
+  width: 61.25rem;
+  height: 21.375rem;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Banner image */
+.hero-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.tab-container {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab {
+  padding: 1rem 1.5rem;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.tab p {
+  margin: 0;
+  color: #222;
+}
+
+/* Left color strips */
+.blue-bar {
+  border-left: 10px solid #19b2de;
+}
+
+.red-bar {
+  border-left: 10px solid #de6262;
+}
+
+.yellow-bar {
+  border-left: 10px solid #ffb901;
+}
+
+/* ________________________________________________ */
