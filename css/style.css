@@ -663,7 +663,11 @@ header {
 }
 
 /* ==================== WORKS RESPONSIVE - TABLET ==================== */
-
+@media screen and (min-width: 40em) {
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 /* ==================== WORKS RESPONSIVE - MOBILE ==================== */
 
 /* ==================== PARTNERS SECTION ==================== */
@@ -693,7 +697,11 @@ header {
 }
 
 /* ==================== PARTNERS RESPONSIVE - TABLET ==================== */
-
+@media screen and (min-width: 40em) {
+  .partner-logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 /* ==================== PARTNERS RESPONSIVE - MOBILE ==================== */
 
 /* ==================== FOOTER SECTION ==================== */
@@ -960,7 +968,11 @@ header {
 }
 
 /* ==================== FOOTER RESPONSIVE - TABLET ==================== */
-
+@media screen and (min-width: 40em) {
+  .footer-col {
+    flex: 0 0 calc(50% - 25px);
+  }
+}
 /* ==================== FOOTER RESPONSIVE - MOBILE ==================== */
 @media screen and (max-width: 39.9375em) {
   .footer-col {
