@@ -277,6 +277,16 @@ header {
 }
 
 /* ==================== RESPONSIVE - MOBILE ==================== */
+@media screen and (max-width: 39.9375em) {
+  .nav-menu {
+    display: none;
+  }
+
+  .logo {
+    font-size: 1.375rem;
+    padding: 1.125rem 1.25rem;
+  }
+}
 
 /* ==================== HERO SECTION ==================== */
 
@@ -404,7 +414,7 @@ header {
 }
 /* ==================== HERO RESPONSIVE - MOBILE ==================== */
 
-@media (max-width: 760px) {
+@media screen and (max-width: 40em) {
   .hero-outer {
     display: none;
   }
@@ -501,7 +511,7 @@ header {
 
 /* ==================== SERVICES RESPONSIVE - MOBILE ==================== */
 
-@media (max-width: 760px) {
+@media screen and (min-width: 40em) {
   .services {
     grid-template-columns: 1fr;
     gap: 1.5625rem;
@@ -614,7 +624,16 @@ header {
 }
 
 /* ==================== POSTS RESPONSIVE - MOBILE ==================== */
+@media screen and (min-width: 40em) {
+    .posts {
+        grid-template-columns: 1fr;
+    }
 
+    .post:first-child {
+        grid-column: span 1;
+    }
+}
+}
 /* ==================== WORKS/PORTFOLIO SECTION ==================== */
 
 /* Portfolio grid - 3 columns on desktop */
@@ -668,7 +687,15 @@ header {
   }
 }
 /* ==================== WORKS RESPONSIVE - MOBILE ==================== */
+@media screen and (min-width: 40em) {
+        .work-grid {
+        grid-template-columns: 1fr;
+    }
 
+    .work-item img {
+        height: 12.5rem;
+    }
+}
 /* ==================== PARTNERS SECTION ==================== */
 
 /* Partner logos grid - 5 columns on desktop */
@@ -702,7 +729,11 @@ header {
   }
 }
 /* ==================== PARTNERS RESPONSIVE - MOBILE ==================== */
-
+@media screen and (min-width: 40em) {
+        .partners {
+        display: none;
+    }
+}
 /* ==================== FOOTER SECTION ==================== */
 
 /* Main footer container with dark background */
@@ -973,7 +1004,7 @@ header {
   }
 }
 /* ==================== FOOTER RESPONSIVE - MOBILE ==================== */
-@media screen and (max-width: 39.9375em) {
+@media screen and (max-width: 40em) {
   .footer-col {
     flex: 0 0 100%;
   }
