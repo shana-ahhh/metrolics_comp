@@ -68,29 +68,6 @@ textarea {
     resize: vertical;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-/* MOBILE SCREEN */
-@media (min-sidth: 760px) {
-    h1 {
-        font-size: 2.125rem;
-        font-weight: 400;
-    }
-
-    .mobile-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-}
-
 /* 1.2 Core Styling */
 *,
 *:before,
@@ -98,13 +75,15 @@ textarea {
     box-sizing: border-box;
 }
 
-img {
-    width: 100%;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-/* 1.3 Typgraphy */
+/* 1.3 Typography */
 h1,
 h2,
+h4,
 h5,
 h6 {
     font-family: "Ubuntu", sans-serif;
@@ -126,23 +105,30 @@ h2 {
 }
 
 h3 {
-    font-size: 0.6875rem;
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    color: #a3a3a3;
-    margin: 5px 0 1.5rem;
-    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 0.9375rem;
 }
 
 h4 {
-    font-family: "Ubuntu", sans-serif;
     font-size: 1rem;
     font-weight: 700;
-    margin: 0;
 }
 
-p {
+body {
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+footer {
+    background-color: #0e2e4e;
+    color: #fff;
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+    width: 100%;
+    padding: 3.125rem;
 }
 
 /* ==========================================================================
@@ -159,207 +145,512 @@ header {
     padding: 1rem;
 }
 
-footer {
-    background-color: #0e2e4e;
-    color: #fff;
-}
+/* ==================== HEADER & NAVIGATION ==================== */
 
-/* 2.1 Core layout */
-.row {
-    display: grid;
-    row-gap: 1rem;
-}
-
-.col {
-    position: relative;
-    background-color: rgb(242, 230, 177);
-}
-
-/* Header */
-.logo-wrapper {
+/* Header: horizontal menu layout on the right side (desktop) */
+.header {
     display: flex;
-    color: #4d4d4d;
-    font-size: 2rem;
+    background: white;
+    align-items: flex-end;
+    max-width: 80rem;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 3.125rem;
+    justify-content: space-between;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 1.75rem;
     font-weight: 600;
-    letter-spacing: 0.04rem;
+    color: #4a5568;
+    text-decoration: none;
+    background: white;
 }
 
-.highlighted-text {
-    color: #1eafde;
+.logo span {
+    color: #4a5568;
 }
 
-/* Section: Things That We Do */
-.horizontal-container {
+/* Main navigation menu - flex layout for horizontal alignment */
+.nav-menu {
     display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+    list-style: none;
+    gap: 0;
+    margin: 0;
 }
 
-.card {
-    width: 5rem;
-    padding: 0.75rem;
-    gap: 0.625rem;
-    border-radius: 0.125rem;
+.nav-menu li {
+    position: relative;
 }
 
-.card--web {
-    border: 3px solid #feb902;
+/* Navigation links styling with padding and transitions */
+.nav-menu li a {
+    display: flex;
+    align-items: flex-end; /* Align to bottom */
+    justify-content: flex-start; /* Align to left */
+    padding: 40px 40px 15px 15px; /* top, right, bottom, left */
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-family: "Ubuntu", sans-serif;
+    transition: opacity 0.3s;
+    white-space: nowrap;
 }
 
-.card--photo {
-    border: 3px solid #25c389;
+/* Hover state for navigation links */
+.nav-menu li a:hover {
+    background-color: #f0f08c !important;
+    color: #0057c2;
 }
 
-.card--app {
-    border: 3px solid #de6262;
+/* Color scheme for each menu item */
+/* Item 1 - Green */
+.nav-menu li:nth-child(1) a {
+    background: #2ecc71;
 }
 
-.card--ux {
-    border: 3px solid #1596bd;
+/* Item 2 - Yellow */
+.nav-menu li:nth-child(2) a {
+    background: #f1c40f;
 }
 
-/* Section: Whats Up Lately? */
-.vertical-container {
+/* Item 3 - Red */
+.nav-menu li:nth-child(3) a {
+    background: #e74c3c;
+}
+
+/* Item 4 - Blue */
+.nav-menu li:nth-child(4) a {
+    background: #3498db;
+}
+
+/* Item 5 - Dark Blue */
+.nav-menu li:nth-child(5) a {
+    background: #34495e;
+}
+
+/* Dropdown arrow indicator */
+.nav-menu li.has-dropdown > a::after {
+    content: ">";
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-left: 0.3125rem;
+}
+
+/* ==================== RESPONSIVE - TABLET ==================== */
+
+
+
+/* ==================== RESPONSIVE - MOBILE ==================== */
+
+
+
+
+/* ==================== HERO SECTION ==================== */
+
+/* Hero outer wrapper with background color */
+.hero-outer {
+    padding: 0 3.125rem;
+    background: #ebebeb;
+}
+
+/* Main hero container with background image and centered content */
+.hero {
+    position: relative;
+    max-width: 73.75rem;
+    height: 23.75rem;
+    margin: 0 auto;
+    background: url("../img/Banner.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+/* Hero text content wrapper with max-width constraint */
+.hero-content {
+    width: 100%;
+    max-width: 68.75rem;
+    padding: 0 1.25rem;
+    box-sizing: border-box;
+}
+
+/* Flex container for hero text with gap between elements */
+.hero-text {
     display: flex;
     flex-direction: column;
-    gap: 1rem;;
+    gap: 0.75rem;
 }
 
-.post-card {
+/* Metro-style tag with colored left border */
+.tag {
     position: relative;
-    width: 100%;
+    display: inline-block;
+    padding: 0.75rem 1.125rem 0.75rem 1.375rem;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    width: fit-content;
+    background: rgba(255, 255, 255, 0.88);
+    color: #222;
+    backdrop-filter: blur(3px);
+}
+
+/* Colored left border for tags */
+.tag::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.375rem;
+    height: 100%;
+}
+
+.tag-blue::before {
+    background: #3498db;
+}
+
+.tag-red::before {
+    background: #e74c3c;
+}
+
+.tag-yellow::before {
+    background: #f1c40f;
+}
+
+/* Previous/Next navigation buttons - positioned outside image */
+.hero-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    background: rgba(217, 217, 217, 0.64);
+    border: 0.25rem solid rgba(109, 109, 109, 0.18);
+    border-radius: 50%;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.18);
+    transition: all 0.2s;
+    z-index: 10;
+}
+
+.hero-btn--left {
+    left: -3.4375rem;
+}
+
+.hero-btn--right {
+    right: -3.4375rem;
+}
+
+/* ==================== HERO RESPONSIVE - TABLET ==================== */
+
+
+
+
+
+/* ==================== HERO RESPONSIVE - MOBILE ==================== */
+
+@media (max-width: 760px) {
+    .hero-outer {
+        display: none;
+    }
+}
+
+/* ==================== ABOUT SECTION ==================== */
+
+.about {
+    text-align: center;
+}
+
+/* About section title */
+.about-title {
+    font-size: 1.75rem;
+    line-height: 1.6;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Highlight color for section title */
+.about-title span {
+    color: #29a9e1;
+    font-weight: 700;
+}
+
+/* ==================== SERVICES SECTION ==================== */
+
+.sub {
+    color: #a3a3a3;
+    font-size: 0.6875rem;
+    margin-bottom: 3.125rem;
+    text-align: center;
+}
+
+/* Services grid layout - 4 columns on desktop */
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    padding: 3.75rem 0;
+}
+
+.service-text {
+    min-width: 0; /* prevents text overflow */
+}
+
+/* Service item description text */
+.service p {
+    margin-top: 0.3125rem;
+    text-align: justify;
+}
+
+/* Icon box styling with colored borders */
+.icon {
+    width: 4.375rem;
+    height: 4.375rem;
     margin: 0 auto;
-    background-image: url("../img/IMG_Content.png");
-    background-size: cover;
-    background-position: center;
+    border: 3px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+.icon img {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+}
+
+/* Icon color variations */
+.icon.yellow {
+    border-color: #feb902;
+    color: #feb902;
+}
+.icon.green {
+    border-color: #25c389;
+    color: #25c389;
+}
+.icon.red {
+    border-color: #de6262;
+    color: #de6262;
+}
+.icon.blue {
+    border-color: #1596bd;
+    color: #1596bd;
+}
+
+/* ==================== SERVICES RESPONSIVE - TABLET ==================== */
+
+
+
+
+/* ==================== SERVICES RESPONSIVE - MOBILE ==================== */
+
+@media (max-width: 760px) {
+    .services {
+        grid-template-columns: 1fr;
+        gap: 1.5625rem;
+    }
+
+    .service {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.125rem;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .service-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icon {
+        width: 3.75rem;
+        height: 3.75rem;
+        flex-shrink: 0;
+    }
+}
+
+/* ==================== POSTS/BLOG SECTION ==================== */
+
+/* Posts grid - 3 columns on desktop */
+.posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875rem;
+}
+
+/* Individual post card */
+.post {
+    background: white;
+    text-align: left;
+}
+
+/* Post image container with overflow hidden for border-radius */
+.post-img {
+    position: relative;
     overflow: hidden;
-    gap: 10px;
-    border-radius: 0.125rem;
+    max-height: 25rem;
 }
 
-.post-card--lg {
-    height: 18rem;
+.post-img img {
+    width: 100%;
+    display: block;
+    border-radius: 2px 2px 0 0;
+    transition: transform 0.4s;
 }
 
-.post-card--md {
-    height: 16rem;
-}
-
-/* Date badge */
+/* Date badge in top-left corner */
 .date {
     position: absolute;
     top: 0;
     left: 0;
-    background: #d8605f;
+    border-radius: 2px 0 0 0;
+    background: #d85c5c;
     color: white;
-    padding: 10px 8px;
+    padding: 0.5rem 0.625rem;
     text-align: center;
-    font-family: "Ubuntu", sans-serif;
+    font-size: 0.75rem;
 }
 
 .day {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+    font-weight: bold;
     display: block;
-    line-height: 8px;
-    padding-top: 12px;
 }
 
-.month {
-    font-size: 0.6rem;
-    font-weight: 300;
-    margin: 0;
-}
-
-/* Bottom info bar */
+/* Post info bar with blue background */
 .post-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #19b2de;
-    color: #fff;
-    padding: 1rem;
+    background: #3bb3da;
+    color: white;
+    padding: 0.625rem 1.125rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 0 0 2px 2px;
 }
 
-.text {
-    line-height: 5px;
-    padding: 0;
+.post-info h4 {
+    margin: 0;
+    font-size: 0.9375rem;
 }
 
-.text h4 {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 10px;
+.post-info span {
+    font-size: 0.75rem;
 }
 
-.text p {
-    font-size: 0.6875rem;
-}
-
+/* Icon box in post info */
 .square {
-    width: 18px;
-    height: 18px;
-    background: #1596bd;
-    flex-shrink: 0;
+    width: 1.875rem;
+    height: 1.875rem;
+    background: rgba(0, 0, 0, 0.15);
 }
 
-/* Footer */
-footer h2,
-h3 {
-    color: #fff;
-}
+/* ==================== POSTS RESPONSIVE - TABLET ==================== */
 
-.avatar {
-    width: 30vw;
-    height: 30vw;
-    border-radius: 50%;
-    object-fit: cover;
-    aspect-ratio: 1 / 1;
-}
 
-/* bio */
-.footer__sm-col-3 {
+
+
+/* ==================== POSTS RESPONSIVE - MOBILE ==================== */
+
+
+
+
+
+
+/* ==================== WORKS/PORTFOLIO SECTION ==================== */
+
+/* Portfolio grid - 3 columns on desktop */
+.work-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.875rem;
 }
 
-.bio {
-    grid-column: 2/4;
-    font-size: 0.75rem;
-    max-width: 30rem;
+/* Portfolio item with overflow hidden for smooth hover effect */
+.work-item {
+    overflow: hidden;
+    position: relative;
+    border-radius: 3px;
 }
 
-/* track us */
-.footer__sm-col-3 .track-us {
-    grid-column: 2/4;
+.work-item img {
+    width: 100%;
+    height: 14.375rem;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Overlay on hover with blue background */
+.work-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(39, 179, 218, 0.9);
+    color: white;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
-    max-width: 100%;
+    justify-content: flex-end;
     align-items: flex-start;
+    text-align: flex-end;
+    padding: 1.25rem;
+    opacity: 0;
+    transform: translateY(100%);
 }
 
-/* social icons */
-.social-icons {
-    display: flex;
-    gap: 0.5rem;
-    padding: 0.5rem 0;
+/* Show overlay on item hover */
+.work-item:hover .work-overlay {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.social-icons img {
-    width: 2rem;
-    height: 2rem;
-    background: yellow;
+/* ==================== WORKS RESPONSIVE - TABLET ==================== */
+
+
+
+
+/* ==================== WORKS RESPONSIVE - MOBILE ==================== */
+
+
+
+
+
+/* ==================== PARTNERS SECTION ==================== */
+
+/* Partner logos grid - 5 columns on desktop */
+.partner-logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2.5rem;
+    align-items: center;
 }
 
-/* heading */
-.left-med-heading {
-    text-align: left;
-    color: #fff;
+/* Logo item styling */
+.partner-logos .logo {
+    background: #f5f5f5;
+    padding: 1.5625rem;
+    border-radius: 3px;
+    transition: 0.3s;
 }
+
+.partner-logos .logo img {
+    width: 100%;
+    max-height: 2.8125rem;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+/* ==================== PARTNERS RESPONSIVE - TABLET ==================== */
+
+
+
+
+/* ==================== PARTNERS RESPONSIVE - MOBILE ==================== */
+
+
+
+
 
 /* ==================== FOOTER SECTION ==================== */
 
@@ -367,8 +658,6 @@ h3 {
 .footer {
     background: #0d2d46;
     color: #c9d6df;
-    margin-top: 3.75rem;
-    padding-top: 3.75rem;
 }
 
 /* Colored bottom bar in 4 colors */
@@ -443,7 +732,7 @@ h3 {
 
 /* Highlight color in footer columns */
 .footer-col span {
-    color: #19B2DE;
+    color: #19b2de;
 }
 
 /* Column heading styling */
@@ -487,32 +776,64 @@ h3 {
 }
 
 /* Column width distribution */
-.footer-col:nth-child(1) { flex-grow: 1; }     /* About Us */
-.footer-col:nth-child(2) { flex-grow: 0.8; }   /* Instagram */
-.footer-col:nth-child(3) { flex-grow: 2.0; }   /* Mastodon */
-.footer-col:nth-child(4) { flex-grow: 0.5; }   /* Track us */
+.footer-col:nth-child(1) {
+    flex-grow: 1;
+} /* About Us */
+.footer-col:nth-child(2) {
+    flex-grow: 0.8;
+} /* Instagram */
+.footer-col:nth-child(3) {
+    flex-grow: 2;
+} /* Mastodon */
+.footer-col:nth-child(4) {
+    flex-grow: 0.5;
+} /* Track us */
 
 /* ==================== FOOTER COLUMN COLORS ==================== */
 
 /* About column - Yellow heading */
-.footer-col.about h4 { color: #FFB901; }
-.footer-col.about h4::after { background: #21C183; }
-.footer-col.about h4::before { border-top: 6px solid #21C183; }
+.footer-col.about h4 {
+    color: #ffb901;
+}
+.footer-col.about h4::after {
+    background: #21c183;
+}
+.footer-col.about h4::before {
+    border-top: 6px solid #21c183;
+}
 
 /* Instagram column - Red heading */
-.footer-col.insta h4 { color: #DE6262; }
-.footer-col.insta h4::after { background: #19B2DE; }
-.footer-col.insta h4::before { border-top: 6px solid #19B2DE; }
+.footer-col.insta h4 {
+    color: #de6262;
+}
+.footer-col.insta h4::after {
+    background: #19b2de;
+}
+.footer-col.insta h4::before {
+    border-top: 6px solid #19b2de;
+}
 
 /* Mastodon column - Blue heading */
-.footer-col.mastodon h4 { color: #19B2DE; }
-.footer-col.mastodon h4::after { background: #FFB901; }
-.footer-col.mastodon h4::before { border-top: 6px solid #FFB901; }
+.footer-col.mastodon h4 {
+    color: #19b2de;
+}
+.footer-col.mastodon h4::after {
+    background: #ffb901;
+}
+.footer-col.mastodon h4::before {
+    border-top: 6px solid #ffb901;
+}
 
 /* Track column - White heading */
-.footer-col.track h4 { color: #ffffff; }
-.footer-col.track h4::after { background: #19B2DE; }
-.footer-col.track h4::before { border-top: 6px solid #19B2DE; }
+.footer-col.track h4 {
+    color: #ffffff;
+}
+.footer-col.track h4::after {
+    background: #19b2de;
+}
+.footer-col.track h4::before {
+    border-top: 6px solid #19b2de;
+}
 
 /* Track column specific styling */
 .footer-col.track {
@@ -537,11 +858,21 @@ h3 {
 }
 
 /* Social box colors */
-.s1 { background: #527CC4; }   /* Blue */
-.s2 { background: #E46145; }   /* Red-orange */
-.s3 { background: #00B0E2; }   /* Cyan */
-.s4 { background: #F6679C; }   /* Pink */
-.s5 { background: #FFB901; }   /* Yellow */
+.s1 {
+    background: #527cc4;
+} /* Blue */
+.s2 {
+    background: #e46145;
+} /* Red-orange */
+.s3 {
+    background: #00b0e2;
+} /* Cyan */
+.s4 {
+    background: #f6679c;
+} /* Pink */
+.s5 {
+    background: #ffb901;
+} /* Yellow */
 
 /* ==================== SUBSCRIBE FORM ==================== */
 
@@ -558,7 +889,7 @@ h3 {
     flex: 1;
     border: none;
     padding: 0 0.875rem;
-    background: #DE6262;
+    background: #de6262;
     color: white;
     font-size: 0.875rem;
     outline: none;
@@ -570,9 +901,9 @@ h3 {
 
 /* Submit button */
 .subscribe-form button {
-    border: none; 
+    border: none;
     padding: 0.9375rem;
-    background: #FFB901;
+    background: #ffb901;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -584,18 +915,14 @@ h3 {
     height: 1.25rem;
 }
 
-/* 2.2 Small only */
-@media screen and (max-width: 39.9375em) {
-    .s-hide {
-        display: none;
-    }
-}
+/* ==================== FOOTER RESPONSIVE - TABLET ==================== */
+
+
+
+
+
 /* ==================== FOOTER RESPONSIVE - MOBILE ==================== */
 @media screen and (max-width: 39.9375em) {
-    .s-hide {
-        display: none;
-    }
-
     .footer-col {
         flex: 0 0 100%;
     }
@@ -627,437 +954,8 @@ h3 {
     }
 }
 
-/* 2.3 medium and up */
-@media screen and (min-width: 40em) {
-    .row {
-        max-width: 70rem;
-        column-gap: 1.5rem;
-        row-gap: 1.5rem;
-        margin: 0 auto;
-    }
 
-    .grid {
-        display: grid;
-        column-gap: 0.5rem;
-        row-gap: 0.5rem;
-    }
 
-    .m-col-2 {
-        grid-template-columns: 1fr 1fr;
-    }
 
-    .m-col-3 {
-        grid-template-columns: repeat(3, 1fr);
-    }
 
-    .m-col-4 {
-        grid-template-columns: repeat(4, 1fr);
-    }
 
-    .m-col-5 {
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-    .m-1-2 {
-        grid-template-columns: 1fr 2fr;
-    }
-}
-
-/* 2.4 Medium only */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
-    .m-row-span {
-        grid-column-start: 1;
-        grid-column-end: -1;
-    }
-
-    .m-hide {
-        display: none;
-    }
-}
-
-/* 2.5 large screens and up 2.6 Large only */
-@media screen and (min-width: 64em) {
-    .l-col-2 {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .l-col-3 {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .l-col-4 {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .l-col-5 {
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-    .l-col-6 {
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-    .l-row-span {
-        grid-column-start: 1;
-        grid-column-end: -1;
-    }
-
-    .l-hide {
-        display: none;
-    }
-}
-
-/* .page-grid {
-    display: grid;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: 
-        "header header header header"
-        "main main main main"
-        "footer footer footer footer";
-}
-
-header {
-    grid-area: header;
-}
-
-main {
-    grid-area: main;
-    margin: 100px;
-}
-
-footer {
-    grid-area: footer;
-    background: #0E2E4E;
-    color: #fff;
-    padding: 50px;
-}
-
-h1 {
-    text-align: center;
-    font-size: 50px;
-    color: #3B3B3B;
-}
-
-.header-grid {
-    display: flex;
-    flex-direction: column;
-}
-
-.nav-bar ul {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-items: center;
-    list-style: none;
-}
-
-.hero-image-wrapper img {
-    background-image: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.tab {
-    width: fit-content;
-    height: auto;
-    display: block;
-    padding: 10px;
-    margin: 10px;
-    background: blue;
-    color: black;
-} */
-
-/* Individual tab colors */
-/* .home { 
-    background: #4CAF50; /* green */
-/* } 
-    
-.portfolio { 
-    background: #FF9800;  
-} 
-
-.blog { 
-    background: #F44336;  
-} 
-
-.quo { 
-    background: #00BCD4; 
-} 
-
-.chat { 
-    background: #3F51B5; 
-}  */
-
-/* Service Section*/
-/* .services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-        "heading heading heading heading"
-        "offer1 offer2 offer3 offer4";
-    gap: 30px;
-    justify-items: center; 
-    text-align: center;
-}
-
-.services-grid p {
-    text-align: justify;
-}
-.services-grid .heading {
-    grid-area: heading;
-
-}
-
-.services-grid .offer1 {
-    grid-area: offer1;
-}
-
-.services-grid .offer2 {
-    grid-area: offer2;
-}
-
-.services-grid .offer3 {
-    grid-area: offer3;
-}
-
-.services-grid .offer4 {
-    grid-area: offer4;
-} */
-
-/* What's Up Lately? Section */
-/* .latest-work {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.latest-work .work-container {
-    display: flex;
-    justify-items: space-between;
-    position: relative;
-    gap: 15px;
-}
-
-.work-container .container {
-    background: grey;
-    width: 400px;
-    height: 400px;
-    position: relative;
-}
-
-.container .date-badge {
-    position: absolute;
-    background: #D8605F;
-    color: #fff;
-    font-size: 17px;
-    width: auto;
-    height: auto;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.work-container .date-text {
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.work-container .post-info-badge {
-    position: absolute;
-    bottom: 0;
-    background: #1596BD;
-    color: #fff;
-    width: 100%;
-    height: auto;
-    padding: 10px;
-    font-size: 22px;
-} */
-
-/* Section 3 */
-/* .flex-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.img-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-content: space-evenly;
-    gap: 15px;
-}
-
-.img-container img {
-    width: 400px;
-    height: 400px;
-    background-color: #D8605F;
-}
-
-.past-clients-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    justify-items: center;
-    align-content: space-evenly;
-    gap: 30px;
-}
-
-.past-clients-grid img {
-    width: 300px;
-    height: 200px;
-    background-color: #D8605F;
-} */
-
-/* ==========================================================================
-   2. STATES
-   ========================================================================== */
-/* ==========================================================================
-   2. THEME
-   ========================================================================== */
-/* ==========================================================================
-   6. UTILITY classes
-   ========================================================================== */
-/* * Hide visually and from screen readers */
-.hidden,
-[hidden] {
-    display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visually-hidden {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    /* 1 */
-}
-
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    white-space: inherit;
-    width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-    content: "";
-    display: table;
-}
-
-.clearfix::after {
-    clear: both;
-}
-
-@media print,
-    (-webkit-min-device-pixel-ratio: 1.25),
-    (min-resolution: 1.25dppx),
-    (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-    *,
-    *::before,
-    *::after {
-        background: #fff !important;
-        color: #000 !important;
-        /* Black prints faster */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]::after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]::after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-    a[href^="#"]::after,
-    a[href^="javascript:"]::after {
-        content: "";
-    }
-
-    pre {
-        white-space: pre-wrap !important;
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
