@@ -207,27 +207,27 @@ header {
 /* Color scheme for each menu item */
 /* Item 1 - Green */
 .nav-menu li:nth-child(1) a {
-  background: #2ecc71;
+  background: #25c389;
 }
 
 /* Item 2 - Yellow */
 .nav-menu li:nth-child(2) a {
-  background: #f1c40f;
+  background: #ffb901;
 }
 
 /* Item 3 - Red */
 .nav-menu li:nth-child(3) a {
-  background: #e74c3c;
+  background: #de6262;
 }
 
 /* Item 4 - Blue */
 .nav-menu li:nth-child(4) a {
-  background: #3498db;
+  background: #19b2de;
 }
 
 /* Item 5 - Dark Blue */
 .nav-menu li:nth-child(5) a {
-  background: #34495e;
+  background: #265787;
 }
 
 /* Dropdown arrow indicator */
@@ -239,7 +239,7 @@ header {
 }
 
 /* ==================== RESPONSIVE - TABLET ==================== */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+@media screen and (max-width: 63.9375em) {
   .header {
     flex-direction: column;
     align-items: stretch;
@@ -250,6 +250,7 @@ header {
     text-align: left;
     padding: 1.25rem;
     border-bottom: 1px solid #e2e8f0;
+    margin: 0 auto;
   }
 
   .nav-menu {
@@ -335,15 +336,15 @@ header {
 }
 
 .tag-blue::before {
-  background: #3498db;
+  background: #19b2de;
 }
 
 .tag-red::before {
-  background: #e74c3c;
+  background: #de6262;
 }
 
 .tag-yellow::before {
-  background: #f1c40f;
+  background: #ffb901;
 }
 
 /* Previous/Next navigation buttons - positioned outside image */
@@ -420,13 +421,11 @@ header {
   font-size: 1.75rem;
   line-height: 1.6;
   color: #444;
-  font-weight: 500;
 }
 
 /* Highlight color for section title */
 .about-title span {
-  color: #29a9e1;
-  font-weight: 700;
+  color: #19b2de;
 }
 
 /* ==================== SERVICES SECTION ==================== */
@@ -488,12 +487,12 @@ header {
   color: #de6262;
 }
 .icon.blue {
-  border-color: #1596bd;
-  color: #1596bd;
+  border-color: #19b2de;
+  color: #19b2de;
 }
 
 /* ==================== SERVICES RESPONSIVE - TABLET ==================== */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+@media screen and (max-width: 63.9375em) {
   .services {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.875rem;
@@ -563,7 +562,7 @@ header {
   top: 0;
   left: 0;
   border-radius: 2px 0 0 0;
-  background: #d85c5c;
+  background: #de6262;
   color: white;
   padding: 0.5rem 0.625rem;
   text-align: center;
@@ -578,7 +577,7 @@ header {
 
 /* Post info bar with blue background */
 .post-info {
-  background: #3bb3da;
+  background: #19b2de;
   color: white;
   padding: 0.625rem 1.125rem;
   display: flex;
@@ -604,7 +603,7 @@ header {
 }
 
 /* ==================== POSTS RESPONSIVE - TABLET ==================== */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+@media screen and (max-width: 63.9375em) {
   .posts {
     grid-template-columns: 1fr 1fr;
   }
@@ -663,7 +662,7 @@ header {
 }
 
 /* ==================== WORKS RESPONSIVE - TABLET ==================== */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+@media screen and (max-width: 63.9375em) {
   .work-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -697,7 +696,7 @@ header {
 }
 
 /* ==================== PARTNERS RESPONSIVE - TABLET ==================== */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+@media screen and (max-width: 63.9375em) {
   .partner-logos {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -723,10 +722,10 @@ header {
   display: block;
   background: linear-gradient(
     to right,
-    #27ae60 0% 25%,
-    #f1c40f 25% 50%,
-    #e67e22 50% 75%,
-    #3498db 75% 100%
+    #25c389 0% 25%,
+    #ffb901 25% 50%,
+    #de6262 50% 75%,
+    #19b2de 75% 100%
   );
 }
 
@@ -746,7 +745,7 @@ header {
   left: 0;
   width: 7.5rem;
   height: 0.1875rem;
-  background: #f1c40f;
+  background: #ffb901;
 }
 
 .footer-top p {
@@ -848,10 +847,10 @@ header {
   color: #ffb901;
 }
 .footer-col.about h4::after {
-  background: #21c183;
+  background: #25c389;
 }
 .footer-col.about h4::before {
-  border-top: 6px solid #21c183;
+  border-top: 6px solid #25c389;
 }
 
 /* Instagram column - Red heading */
@@ -911,13 +910,13 @@ header {
 
 /* Social box colors */
 .s1 {
-  background: #527cc4;
+  background: #265787;
 } /* Blue */
 .s2 {
-  background: #e46145;
+  background: #de6262;
 } /* Red-orange */
 .s3 {
-  background: #00b0e2;
+  background: #19b2de;
 } /* Cyan */
 .s4 {
   background: #f6679c;
@@ -968,7 +967,7 @@ header {
 }
 
 /* ==================== FOOTER RESPONSIVE - TABLET ==================== */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+@media screen and (max-width: 63.9375em) {
   .footer-col {
     flex: 0 0 calc(50% - 25px);
   }
