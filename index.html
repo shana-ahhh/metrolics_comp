@@ -3,181 +3,375 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Our Metrolics Web Presence</title>
+	<title>Metrolics - Creative Design Studio</title>
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<meta name="description" content="Metrolics Website">
-	<meta property="og:title" content>
-	<meta property="og:type" content>
-	<meta property="og:url" content>
-	<meta property="og:image" content>
-	<meta property="og:image:alt" content>
-	<meta name="theme-color" content="#fafafa">
+	<meta name="keywords" content="design studio, web design, photography, app development, UX design, creative agency, metrolics">
+    <meta name="author" content="Metrolics Design Studio">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Metrolics - Creative Design Studio">
+    <meta property="og:type" content="website">
+	<meta property="og:url" content="https://metrolics.com">
+    <meta property="og:image" content="img/Metrolics_logo.svg">
+    <meta property="og:image:alt" content="Metrolics Logo - Creative Design Studio">
+    <meta property="og:description" content="Metrolics is a creative design studio offering web solutions, photography, app development, and UX design services.">
+    <meta property="og:site_name" content="Metrolics">
+    <meta property="og:locale" content="en_CA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Metrolics - Creative Design Studio">
+    <meta name="twitter:description" content="We create stunning web experiences, stunning photography, innovative apps, and exceptional UX design.">
+    <meta name="twitter:image" content="img/Metrolics_logo.svg">
+	<link type="image/svg+xml" href="img/Metrolics_logo.svg" rel="icon">
 </head>
-<body class="page-grid">
-	<header class="header-grid">
-		<div class="logo-wrapper">
-			<img class="logo" src="#" alt="Metrolics Logo">
-		</div>
-		<nav class="nav-bar">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="#">Portfolio</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Quo Vadis?</a></li>
-				<li><a href="#">Let's Chat</a></li>
+<body>
+	<header class="header">
+		<a class="logo" href="#">
+			Metrolics
+			<img src="img/Metrolics_logo.svg" alt="Metrolics Logo">
+		</a>
+		<nav>
+			<ul class="nav-menu">
+				<li class="has-dropdown"><a href="#">Home</a></li>
+				<li class="has-dropdown"><a href="#">Portfolio</a></li>
+				<li class="has-dropdown"><a href="#">Blog</a></li>
+				<li class="has-dropdown"><a href="#">Quo Vadis?</a></li>
+				<li class="has-dropdown"><a href="#">Let's Chat</a></li>
 			</ul>
 		</nav>
-		<div class="hero-image-wrapper">
-			<img src="#" alt="#">
-			<div class="tab-container">
-				<div class="blue-bar tab">
-					<p>MetroStyle</p>
-				</div>
-				<div class="red-bar tab">
-					<p>Quick on the Feet</p>
-				</div>
-				<div class="yellow-bar tab">
-					<p>Metro Styling reinvented</p>
-				</div>
-			</div>
-		</div>
-	</header>
+    </header>
 	<main>
-		<h1>Hi folks! We are the <span class="blue-heading">Metrolics</span> design studio. With our help, the sky's the limit to express your creativity!</h1>
-		<section class="services-grid">
-			<div class="heading">
+		<section class="hero-outer">
+			<div class="hero">
+			<button class="hero-btn hero-btn--left" aria-label="Previous">
+				&#10094;
+			</button>
+
+			<div class="hero-content">
+				<div class="hero-text">
+				<span class="tag tag-blue">Metro Style</span>
+				<span class="tag tag-red">Quick on the feet</span>
+				<span class="tag tag-yellow">Metro Styling reinvented</span>
+				</div>
+			</div>
+
+			<button class="hero-btn hero-btn--right" aria-label="Next">
+				&#10095;
+			</button>
+			</div>
+		</section>
+		<section class="about container">
+			<h1 class="about-title">
+			Hi folks! We are <span>Metrolics</span> design studio.<br>
+			With our help, the sky's the limit to express your creativity!
+			</h1>
+
+
+			<div class="service-text">
 				<h2>Things That We Do</h2>
-				<h3>Ask us what we can do for you</h3>
-			</div>
-			<div class="offer1">
-				<img src="#" alt="Web Solutions Icon">
-				<h4>Web Solutions</h4>
-				<p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. We are confident you will be pleased with the results.</p>
-			</div>
-			<div class="offer2">
-				<img src="#" alt="Photography Icon">
-				<h4>Photography</h4>
-				<p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. We are confident you will be pleased with the results.</p>
-			</div>
-			<div class="offer3">
-				<img src="#" alt="App Development Icon">
-				<h4>App Development</h4>
-				<p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. We are confident you will be pleased with the results.</p>
-			</div>
-			<div class="offer4">
-				<img src="#" alt="UX Design Icon">
-				<h4>UX Design</h4>
-				<p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. We are confident you will be pleased with the results.</p>
+				<p class="sub">Ask us what we can do for you</p>
+		
+				<div class="services">
+					<div class="service">
+						<div class="icon yellow">
+							<img src="img/lightbulb.svg" alt="Web Solutions">
+						</div>
+						<div class="service-text">
+							<h3>Web Solutions</h3>
+							<p>
+								We are a fairly small, flexible design studio that designs for
+								print and web. We work flexibly with our clients to fulfill
+								their design needs.
+							</p>
+						</div>
+					</div>
+
+					<div class="service">
+						<div class="icon green">
+							<img src="img/camera_alt.svg" alt="Photography">
+						</div>
+						<div class="service-text">
+							<h3>Photography</h3>
+							<p>
+								We are a fairly small, flexible design studio that designs for
+								print and web. We work flexibly with our clients to fulfill
+								their design needs.
+							</p>
+						</div>
+					</div>
+
+					<div class="service">
+						<div class="icon red">
+							<img src="img/touch_app.svg" alt="App Development">
+						</div>
+						<div class="service-text">
+							<h3>App Development</h3>
+							<p>
+							We are a fairly small, flexible design studio that designs for
+							print and web. We work flexibly with our clients to fulfill
+							their design needs.
+							</p>
+						</div>
+					</div>
+
+					<div class="service">
+						<div class="icon blue">
+							<img src="img/draw.svg" alt="UX Design">
+						</div>
+						<div class="service-text">
+							<h3>UX Design</h3>
+							<p>
+								We are a fairly small, flexible design studio that designs for
+								print and web. We work flexibly with our clients to fulfill
+								their design needs.
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
-		<section class="latest-work">
+
+
+		<section class="latest container">
 			<h2>What's Up Lately?</h2>
-			<h3>Read up on our latest work</h3>
-			<div class="work-container">
-				<div class="container">
-					<div class="date-badge"><span class="date-text">29</span> Jan 2025</div>
-					<img src="#" alt="#">
-					<div class="post-info-badge">
-						<h4>Sample Image Post</h4>
-						<p>Photography</p>
-						<div class="box"></div>
+			<p class="sub">Read up on our latest work</p>
+
+			<div class="posts">
+				<article class="post">
+					<div class="post-img">
+						<img src="img/IMG_Content.png" alt>
+						<div class="date">
+							<span class="day">29</span> 
+							<span class="month">Jan. 2025</span>
+						</div>
 					</div>
-				</div>
-				<div class="container">
-					<div class="date-badge"><span class="date-text">29</span> Jan 2025</div>
-					<img src="#" alt="#">
-					<div class="post-info-badge">
-						<h4>Sample Image Post</h4>
-						<p>Photography</p>
-						<div class="box"></div>
+					<div class="post-info">
+						<div>
+							<h4>Sample Image Post</h4>
+							<p>Photography</p>
+						</div>
+						<div class="square"></div>
 					</div>
-				</div>
-				<div class="container">
-					<div class="date-badge"><span class="date-text">29</span> Jan 2025</div>
-					<img src="#" alt="#">
-					<div class="post-info-badge">
-						<h4>Sample Image Post</h4>
-						<p>Photography</p>
-						<div class="box"></div>
+				</article>
+
+				<article class="post">
+					<div class="post-img">
+						<img src="img/IMG_Content.png" alt>
+						<div class="date">
+							<span class="day">29</span> 
+							<span class="month">Jan. 2025</span>
+						</div>
 					</div>
-				</div>
+					<div class="post-info">
+						<div>
+							<h4>Sample Image Post</h4>
+							<p>Photography</p>
+						</div>
+						<div class="square"></div>
+					</div>
+				</article>
+
+				<article class="post">
+					<div class="post-img">
+						<img src="img/IMG_Content.png" alt>
+						<div class="date">
+							<span class="day">29</span> 
+							<span class="month">Jan. 2025</span>
+						</div>
+					</div>
+					<div class="post-info">
+						<div>
+							<h4>Sample Image Post</h4>
+							<p>Photography</p>
+						</div>
+						<div class="square"></div>
+					</div>
+				</article>
 			</div>
 		</section>
-		<section class="flex-container best-work">
+
+
+		<section class="works container">
 			<h2>Our Best Work. Period.</h2>
-			<h3>Client happy? We are happy.</h3>
-			<div class="img-container">
-				<img src="#" alt="#">
-				<img src="#" alt="#">
-				<img src="#" alt="#">
-				<img src="#" alt="#">
-				<img src="#" alt="#">
-				<img src="#" alt="#">
+			<p class="sub">Client happy? We are happy.</p>
+
+			<div class="work-grid">
+				<div class="work-item">
+					<img src="img/IMG_Content.png" alt>
+					<div class="work-overlay">
+					<h4>Sample Image Post</h4>
+					<span>Photography</span>
+					</div>
+				</div>
+				<div class="work-item">
+					<img src="img/IMG_Content.png" alt>
+
+					<div class="work-overlay">
+					<h4>Sample Image Post</h4>
+					<span>Photography</span>
+					</div>
+				</div>
+				<div class="work-item">
+					<img src="img/IMG_Content.png" alt>
+
+					<div class="work-overlay">
+					<h4>Sample Image Post</h4>
+					<span>Photography</span>
+					</div>
+				</div>
+				<div class="work-item">
+					<img src="img/IMG_Content.png" alt>
+
+					<div class="work-overlay">
+					<h4>Sample Image Post</h4>
+					<span>Photography</span>
+					</div>
+				</div>
+				<div class="work-item">
+					<img src="img/IMG_Content.png" alt>
+
+					<div class="work-overlay">
+					<h4>Sample Image Post</h4>
+					<span>Photography</span>
+					</div>
+				</div>
+				<div class="work-item">
+					<img src="img/IMG_Content.png" alt>
+
+					<div class="work-overlay">
+					<h4>Sample Image Post</h4>
+					<span>Photography</span>
+					</div>
+				</div>
 			</div>
 		</section>
-		<section class="flex-container satisfaction-guaranteed">
+
+
+		<section class="partners container">
 			<h2>Satisfaction Guaranteed</h2>
-			<h3>Past clients stoked with our work. We are not happy until YOU are happy.</h3>
-			<div class="past-clients-grid">
-				<img src="#" alt="#">
-				<img src="#" alt="#">
-				<img src="#" alt="#">
-				<img src="#" alt="#">
-				<img src="#" alt="#">
+			<p class="sub">Past clients stoked with our work. We are not happy until YOU are happy.</p>
+			
+			<div class="partner-logos">
+				<div class="logo"> 
+					<img src="img/logo1.png" alt></div>
+				<div class="logo">
+					<img src="img/logo2.png" alt>
+				</div>
+				<div class="logo"> 
+					<img src="img/logo3.png" alt>
+				</div>
+				<div class="logo"> 
+					<img src="img/logo4.png" alt>
+				</div>
+				<div class="logo"> 
+					<img src="img/logo5.png" alt>
+				</div>
 			</div>
 		</section>
 	</main>
-	<footer>
-		<div class="about-alf">
-			<img src="#" alt="#">
-			<div class="alf-text-wrapper">
-				<p>Alf has over 10 years experience in the industry. He is our Creative Director, digital designer, web designer and front-end developer. He is also pretty good with a sketchbook. Before starting the company Peewee worked as a designer and studio manager for a design house who boasted a number of big name clients.</p>
-				<div class="line"></div>
+
+<!-- FOOTER -->
+
+    <footer class="footer">
+		<div class="footer-top container">
+			<img class="avatar" src="img/Alf CEO.png" alt>
+			<p>
+			Alf has over 10 years experience in the industry. He is our Creative
+			Director, digital designer, web designer and front-end developer. He
+			is also pretty good with a sketchbook. Before starting the company
+			Peewee worked as a designer and studio manager for a design house who
+			boasted a number of big name clients.
+			</p>
+		</div>
+
+		<div class="footer-container container">
+			<div class="footer-col about">
+				<h4>About Us</h4>
+				<p>
+					Minions ipsum potatoooo potatoooo uuuhhh. Chasy poulet tikka masala
+					jiji wiiiii hahaha po kass tulaliloo potatoooo. Bee do bee do bee do
+					chasy ti aamoo! Po kass daa bee do bee do bee do po kass wiiiii butt
+					chasy.
+				</p>
+				<br>
+				<p>
+					Pepete uuuhhh hahaha gelatooo belloo! Bananaaaa aaaaaah butt
+					potatoooo hana dul sae butt. Hahaha wiiiii ti aamoo! Ti aamoo!
+					Baboiii jeje. Hahaha gelatooo daa me want bananaaa! Underweaaar
+					potatoooo tank yuuu! Aaaaaah potatoooo poopayee.
+				</p>
+			</div>
+
+			<div class="footer-col insta">
+				<h4>Instagram</h4>
+				<div class="insta-grid">
+					<img src="img/footer-minion.png">
+					<img src="img/footer-minion.png">
+					<img src="img/footer-minion.png">
+					<img src="img/footer-minion.png">
+					<img src="img/footer-minion.png">
+					<img src="img/footer-minion.png">
+					<img src="img/footer-minion.png">
+					<img src="img/footer-minion.png">
+				</div>
+			</div>
+
+			<div class="footer-col mastodon">
+				<h4>What's New on Mastodon</h4>
+				<p>
+					<span>@Minions</span> - ipsum banana potatoooo uuuhhh. Chasy poulet
+					tikka masala jiji wiiiii hahaha tulaliloo potatoooo. Bee do bee do
+					bee do chasy ti aamoo! Po kass daa b ee do bee do bee do po kass
+					wiiiii butt chasy. Pepete uuuhhh hahaha gelatooo belloo! ananaaaa
+					aaaaaah butt potatoooo hana dul sae butt. Hahaha wiiiii ti aamoo! Ti
+					aamoo! Baboiii jeje. Hahaha gelatooo daa me want bananaaa!
+					Underweaaar potatoooo tank yuuu! Aaaaaah potatoooo poopayee.
+				</p>
+				<br>
+
+				<p>
+					<span>@Minions</span> - ipsum banana potatoooo uuuhhh. Chasy poulet
+					tikka masala jiji wiiiii hahaha tulaliloo potatoooo. Bee do bee do
+					bee do chasy ti aamoo! Po kass daa b ee do bee do bee do po kass
+					wiiiii butt chasy. Pepete uuuhhh hahaha gelatooo belloo! ananaaaa
+					aaaaaah butt potatoooo hana dul sae butt. Hahaha wiiiii ti aamoo! Ti
+					aamoo! Baboiii jeje. Hahaha gelatooo daa me want bananaaa!
+					Underweaaar potatoooo tank yuuu! Aaaaaah potatoooo poopayee.
+				</p>
+				<br>
+
+				<p>
+					<span>@Minions</span> - ipsum banana potatoooo uuuhhh. Chasy poulet
+					tikka masala jiji wiiiii hahaha tulaliloo potatoooo. Bee do bee do
+					bee do chasy ti aamoo! Po kass daa b ee do bee do bee do po kass
+					wiiiii butt chasy. Pepete uuuhhh hahaha gelatooo belloo! ananaaaa
+					aaaaaah butt potatoooo hana dul sae butt. Hahaha wiiiii ti aamoo! Ti
+					aamoo! Baboiii jeje. Hahaha gelatooo daa me want bananaaa!
+					Underweaaar potatoooo tank yuuu! Aaaaaah potatoooo poopayee.
+				</p>
+			</div>
+
+			<div class="footer-col track">
+				<h4>Track us!</h4>
+
+				<div class="social-boxes">
+					<span class="s s1"></span>
+					<span class="s s2"></span>
+					<span class="s s3"></span>
+					<span class="s s4"></span>
+					<span class="s s5"></span>
+				</div>
+
+				<form class="subscribe-form">
+					<input type="email" placeholder="Enter your Email...">
+					<button type="submit">
+					<img src="img/Mail.png">
+					</button>
+				</form>
 			</div>
 		</div>
-		<div class="footer-four-cols">
-			<div class="footer-about-us">
-				<h2>About Us</h2>
-				<div class="line"></div>
-				<p>Minions ipsum potatoooo potatoooo uuuhhh. Chasy poulet tikka masala jiji wiiiii hahaha po kass tulaliloo potatoooo. Bee do bee do bee do chasy ti aamoo! Po kass daa bee do bee do bee do po kass wiiiii butt chasy. Pepete uuuhhh hahaha gelatooo belloo! Bananaaaa aaaaaah butt potatoooo hana dul sae butt. Hahaha wiiiii ti aamoo! Ti aamoo! Baboiii jeje. Hahaha gelatooo daa me want bananaaa! Underweaaar potatoooo tank yuuu! Aaaaaah potatoooo poopayee.</p>
-			</div>
-			<div class="instagram-wrapper">
-				<h2>Instagram</h2>
-				<div class="line"></div>
-				<div class="extra-small-container">
-					<img src="#" alt="#">
-					<img src="#" alt="#">
-					<img src="#" alt="#">
-					<img src="#" alt="#">
-					<img src="#" alt="#">
-					<img src="#" alt="#">
-					<img src="#" alt="#">
-					<img src="#" alt="#">
-				</div>
-			</div>
-			<div class="mastodon-wrapper">
-				<h2>What’s New on Mastodon</h2>
-				<div class="line"></div>
-				<p>@Minions - ipsum banana potatoooo uuuhhh. Chasy poulet tikka masala jiji wiiiii hahaha tulaliloo potatoooo. Bee do bee do bee do chasy ti aamoo! Po kass daa b ee do bee do bee do po kass wiiiii butt chasy. Pepete uuuhhh hahaha gelatooo belloo! ananaaaa aaaaaah butt potatoooo hana dul sae butt. Hahaha wiiiii ti aamoo! Ti aamoo! Baboiii jeje. Hahaha gelatooo daa me want bananaaa! Underweaaar potatoooo tank yuuu! Aaaaaah potatoooo poopayee.</p>
-				<p>@Minions - ipsum banana potatoooo uuuhhh. Chasy poulet tikka masala jiji wiiiii hahaha tulaliloo potatoooo. Bee do bee do bee do chasy ti aamoo! Po kass daa b ee do bee do bee do po kass wiiiii butt chasy. Pepete uuuhhh hahaha gelatooo belloo! ananaaaa aaaaaah butt potatoooo hana dul sae butt. Hahaha wiiiii ti aamoo! Ti aamoo! Baboiii jeje. Hahaha gelatooo daa me want bananaaa! Underweaaar potatoooo tank yuuu! Aaaaaah potatoooo poopayee.</p>
-				<p>@Minions - ipsum banana potatoooo uuuhhh. Chasy poulet tikka masala jiji wiiiii hahaha tulaliloo potatoooo. Bee do bee do bee do chasy ti aamoo! Po kass daa b ee do bee do bee do po kass wiiiii butt chasy. Pepete uuuhhh hahaha gelatooo belloo! ananaaaa aaaaaah butt potatoooo hana dul sae butt. Hahaha wiiiii ti aamoo! Ti aamoo! Baboiii jeje. Hahaha gelatooo daa me want bananaaa! Underweaaar potatoooo tank yuuu! Aaaaaah potatoooo poopayee.</p>
-			</div>
-			<div class="track-us-wrapper">
-				<h2>Track us!</h2>
-				<div class="line"></div>
-				<div class="social-icons-wrapper">
-					<img src="#" alt="#">
-					<img src="#" alt="#">
-					<img src="#" alt="#">
-					<img src="#" alt="#">
-					<img src="#" alt="#">
-				</div>
-				<div>
-					<input type="email" placeholder="Enter your Email">
-					<button type="submit"></button>
-				</div>
-			</div>
-		</div>
-	</footer>
+    </footer>
 </body>
 </html>
