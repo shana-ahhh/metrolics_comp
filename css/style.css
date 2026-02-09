@@ -487,19 +487,19 @@ header {
 }
 
 /* Icon color variations */
-.icon.yellow {
+.icon.quaternary {
   border-color: #feb902;
   color: #feb902;
 }
-.icon.green {
+.icon.tertiary {
   border-color: #25c389;
   color: #25c389;
 }
-.icon.red {
+.icon.primary {
   border-color: #de6262;
   color: #de6262;
 }
-.icon.blue {
+.icon.secondary {
   border-color: #19b2de;
   color: #19b2de;
 }
@@ -936,26 +936,26 @@ header {
 }
 
 /* Individual social box */
-.social-boxes .s {
+.social-boxes .box {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 2px;
 }
 
 /* Social box colors */
-.s1 {
+.support {
   background: #265787;
 } /* Blue */
-.s2 {
+.alt {
   background: #de6262;
 } /* Red-orange */
-.s3 {
+.main {
   background: #19b2de;
 } /* Cyan */
-.s4 {
+.accent {
   background: #f6679c;
 } /* Pink */
-.s5 {
+.highlight {
   background: #ffb901;
 } /* Yellow */
 
