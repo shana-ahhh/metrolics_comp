@@ -493,6 +493,12 @@ header {
 }
 
 /* ==================== SERVICES RESPONSIVE - TABLET ==================== */
+@media screen and (min-width: 40em) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.875rem;
+  }
+}
 
 /* ==================== SERVICES RESPONSIVE - MOBILE ==================== */
 
@@ -598,6 +604,15 @@ header {
 }
 
 /* ==================== POSTS RESPONSIVE - TABLET ==================== */
+@media screen and (min-width: 40em) {
+  .posts {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .post:first-child {
+    grid-column: span 2;
+  }
+}
 
 /* ==================== POSTS RESPONSIVE - MOBILE ==================== */
 
