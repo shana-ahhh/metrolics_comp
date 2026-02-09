@@ -372,7 +372,35 @@ header {
 }
 
 /* ==================== HERO RESPONSIVE - TABLET ==================== */
+@media screen and (min-width: 40em) {
+  .hero-content {
+    padding: 0 6.25rem;
+  }
 
+  /* Convert buttons to vertical bars on sides */
+  .hero-btn {
+    top: 0;
+    transform: none;
+    height: 100%;
+    width: 1.875rem;
+    border-radius: 0;
+    border: none;
+    background: rgba(200, 200, 200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: rgba(0, 0, 0, 0.25);
+  }
+
+  .hero-btn--left {
+    left: 0;
+  }
+
+  .hero-btn--right {
+    right: 0;
+  }
+}
 /* ==================== HERO RESPONSIVE - MOBILE ==================== */
 
 @media (max-width: 760px) {
