@@ -1,29 +1,64 @@
 /* ==========================================================================
-    [Table of contents]
+    [Table of Contents]
 
     1. BASE
         1.1 Page Rendering Defaults
         1.2 Core Styling
         1.3 Typography
-    2. LAYOUT
-        2.1 Core Layout
-        2.2 Small only
-        2.3 medium and up
-        2.4 Medium only
-        2.5 large screens and up
-        2.6 Large only
-    3. MODULES
-    4. STATES
-    5. THEME
-    6. UTILITY classes
-    7. PRINT
 
-    refer to http://smacss.com/
-    ========================================================================== */
-/* ==========================================================================
-   BASE
+    2. HEADER SECTION
+        2.1 Header & Navigation
+        2.2 Responsive – Tablet
+        2.3 Responsive – Mobile
+
+    3. HERO SECTION
+        3.1 Hero Base Styles
+        3.2 Hero Responsive – Tablet
+        3.3 Hero Responsive – Mobile
+
+    4. ABOUT SECTION
+        4.1 About Title
+
+    5. SERVICES SECTION
+        5.1 Services Grid
+        5.2 Service Icons
+        5.3 Services Responsive – Tablet
+        5.4 Services Responsive – Mobile
+
+    6. POSTS / BLOG SECTION
+        6.1 Posts Grid
+        6.2 Post Card
+        6.3 Post Info Bar
+        6.4 Posts Responsive – Tablet
+        6.5 Posts Responsive – Mobile
+
+    7. WORKS / PORTFOLIO SECTION
+        7.1 Work Grid
+        7.2 Work Item & Overlay
+        7.3 Works Responsive – Tablet
+        7.4 Works Responsive – Mobile
+
+    8. PARTNERS SECTION
+        8.1 Partner Logos Grid
+        8.2 Partners Responsive – Tablet
+        8.3 Partners Responsive – Mobile
+
+    9. FOOTER SECTION
+        9.1 Footer Base
+        9.2 Footer Top
+        9.3 Footer Columns
+        9.4 Footer Column Colors
+        9.5 Social Boxes
+        9.6 Subscribe Form
+        9.7 Footer Responsive – Tablet
+        9.8 Footer Responsive – Mobile
    ========================================================================== */
-/* 1.1 Page Rendering Defaults */
+
+/* ==========================================================================
+	1. BASE
+   ========================================================================== */
+
+/* ==================== 1.1 PAGE RENDERING DEFAULTS ==================== */
 html {
     color: #222;
     font-size: 1em;
@@ -68,7 +103,7 @@ textarea {
     resize: vertical;
 }
 
-/* 1.2 Core Styling */
+/* ==================== 1.2 CORE STYLING ==================== */
 *,
 *:before,
 *:after {
@@ -80,7 +115,14 @@ textarea {
     padding: 0;
 }
 
-/* 1.3 Typography */
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 3.125rem;
+}
+
+/* ==================== 1.3 TYPOGRAPHY ==================== */
 h1,
 h2,
 h4,
@@ -94,7 +136,7 @@ h6 {
 
 h1 {
     font-size: 2.125rem;
-    margin: 2rem 0 6rem;
+    margin: 5rem;
     color: #3b3b3b;
 }
 
@@ -124,28 +166,11 @@ footer {
     color: #fff;
 }
 
-.container {
-    max-width: 80rem;
-    margin: 0 auto;
-    width: 100%;
-    padding: 3.125rem;
-}
-
 /* ==========================================================================
-   2. LAYOUT
+	2. HEADER
    ========================================================================== */
-/* Helper to display empty layout containers */
-div,
-main,
-section,
-footer,
-header {
-    outline: 1px solid #ccc;
-    min-height: 1rem;
-    padding: 1rem;
-}
 
-/* ==================== HEADER & NAVIGATION ==================== */
+/* ==================== 2.1 HEADER & NAVIGATION ==================== */
 /* Header: horizontal menu layout on the right side (desktop) */
 .header {
     display: flex;
@@ -238,7 +263,7 @@ header {
     margin-left: 0.3125rem;
 }
 
-/* ==================== RESPONSIVE - TABLET ==================== */
+/* ==================== 2.2 RESPONSIVE - TABLET ==================== */
 @media screen and (max-width: 63.9375em) {
     .header {
         flex-direction: column;
@@ -268,7 +293,7 @@ header {
     }
 
     .container {
-        padding: 0 1.25rem !important;
+        padding: 1.25rem;
     }
 
     .hero-outer {
@@ -276,7 +301,7 @@ header {
     }
 }
 
-/* ==================== RESPONSIVE - MOBILE ==================== */
+/* ==================== 2.3 RESPONSIVE - MOBILE ==================== */
 @media screen and (max-width: 39.9375em) {
     .nav-menu {
         display: none;
@@ -289,7 +314,11 @@ header {
     }
 }
 
-/* ==================== HERO SECTION ==================== */
+/* ==========================================================================
+	3. HERO SECTION
+   ========================================================================== */
+
+/* ==================== 3.1 HERO BASE ==================== */
 /* Hero outer wrapper with background color */
 .hero-outer {
     padding: 0 3.125rem;
@@ -302,9 +331,11 @@ header {
     max-width: 73.75rem;
     height: 23.75rem;
     margin: 0 auto;
-    background: url("../img/Banner.png") center/cover no-repeat;
     display: flex;
     align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Hero text content wrapper with max-width constraint */
@@ -382,7 +413,7 @@ header {
     right: -3.4375rem;
 }
 
-/* ==================== HERO RESPONSIVE - TABLET ==================== */
+/* ==================== 3.2 HERO RESPONSIVE - TABLET ==================== */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     .hero-content {
         padding: 0 6.25rem;
@@ -412,14 +443,18 @@ header {
         right: 0;
     }
 }
-/* ==================== HERO RESPONSIVE - MOBILE ==================== */
+/* ==================== 3.3 HERO RESPONSIVE - MOBILE ==================== */
 @media screen and (max-width: 39.9375em) {
     .hero-outer {
         display: none;
     }
 }
 
-/* ==================== ABOUT SECTION ==================== */
+/* ==========================================================================
+	4. ABOUT SECTION
+   ========================================================================== */
+
+/* ==================== 4.1 ABOUT TITLE ==================== */
 .about {
     text-align: center;
 }
@@ -436,7 +471,11 @@ header {
     color: #19b2de;
 }
 
-/* ==================== SERVICES SECTION ==================== */
+/* ==========================================================================
+	5. SERVICES SECTION
+   ========================================================================== */
+
+/* ==================== 5.1 SERVICES SECTION ==================== */
 .sub {
     color: #a3a3a3;
     font-size: 0.6875rem;
@@ -462,6 +501,7 @@ header {
     text-align: justify;
 }
 
+/* ==================== 5.2 SERVICES ICONS ==================== */
 /* Icon box styling with colored borders */
 .icon {
     width: 4.375rem;
@@ -498,15 +538,16 @@ header {
     color: #19b2de;
 }
 
-/* ==================== SERVICES RESPONSIVE - TABLET ==================== */
+/* ==================== 5.3 SERVICES RESPONSIVE - TABLET ==================== */
 @media screen and (max-width: 63.9375em) {
     .services {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.875rem;
+        padding: 0;
     }
 }
 
-/* ==================== SERVICES RESPONSIVE - MOBILE ==================== */
+/* ==================== 5.4 SERVICES RESPONSIVE - MOBILE ==================== */
 @media screen and (max-width: 39.9375em) {
     .services {
         grid-template-columns: 1fr;
@@ -533,7 +574,11 @@ header {
     }
 }
 
-/* ==================== POSTS/BLOG SECTION ==================== */
+/* ==========================================================================
+	6. POSTS/BLOG SECTION
+   ========================================================================== */
+
+/* ==================== 6.1 POSTS GRID ==================== */
 /* Posts grid - 3 columns on desktop */
 .posts {
     display: grid;
@@ -541,6 +586,7 @@ header {
     gap: 1.875rem;
 }
 
+/* ==================== 6.2 POSTS CARD ==================== */
 /* Individual post card */
 .post {
     background: white;
@@ -561,6 +607,7 @@ header {
     transition: transform 0.4s;
 }
 
+/* ==================== 6.3 POSTS INFO BAR ==================== */
 /* Date badge in top-left corner */
 .date {
     position: absolute;
@@ -607,7 +654,7 @@ header {
     background: rgba(0, 0, 0, 0.15);
 }
 
-/* ==================== POSTS RESPONSIVE - TABLET ==================== */
+/* ==================== 6.4 POSTS RESPONSIVE - TABLET ==================== */
 @media screen and (max-width: 63.9375em) {
     .posts {
         grid-template-columns: 1fr 1fr;
@@ -618,7 +665,7 @@ header {
     }
 }
 
-/* ==================== POSTS RESPONSIVE - MOBILE ==================== */
+/* ==================== 6.5 POSTS RESPONSIVE - MOBILE ==================== */
 @media screen and (max-width: 39.9375em) {
     .posts {
         grid-template-columns: 1fr;
@@ -629,7 +676,14 @@ header {
     }
 }
 
-/* ==================== WORKS/PORTFOLIO SECTION ==================== */
+/* ==========================================================================
+	7. WORKS/PORTFOLIO SECTION
+   ========================================================================== */
+.works {
+    padding: 3.75rem;
+}
+
+/* ==================== 7.1 WORK GRID==================== */
 /* Portfolio grid - 3 columns on desktop */
 .work-grid {
     display: grid;
@@ -637,6 +691,7 @@ header {
     gap: 1.875rem;
 }
 
+/* ==================== 7.2 WORK ITEM & OVERLAY ==================== */
 /* Portfolio item with overflow hidden for smooth hover effect */
 .work-item {
     overflow: hidden;
@@ -674,14 +729,14 @@ header {
     transform: translateY(0);
 }
 
-/* ==================== WORKS RESPONSIVE - TABLET ==================== */
+/* ==================== 7.3 WORKS RESPONSIVE - TABLET ==================== */
 @media screen and (max-width: 63.9375em) {
     .work-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* ==================== WORKS RESPONSIVE - MOBILE ==================== */
+/* ==================== 7.4 WORKS RESPONSIVE - MOBILE ==================== */
 @media screen and (max-width: 39.9375em) {
     .work-grid {
         grid-template-columns: 1fr;
@@ -691,7 +746,15 @@ header {
         height: 12.5rem;
     }
 }
-/* ==================== PARTNERS SECTION ==================== */
+
+/* ==========================================================================
+	8. PARTNERS SECTION
+   ========================================================================== */
+.partners {
+    margin-bottom: 3.75rem;
+}
+
+/* ==================== 8.1 PARTNER LOGO GRID ==================== */
 /* Partner logos grid - 5 columns on desktop */
 .partner-logos {
     display: grid;
@@ -716,21 +779,25 @@ header {
     transition: 0.3s;
 }
 
-/* ==================== PARTNERS RESPONSIVE - TABLET ==================== */
+/* ==================== 8.2 PARTNERS RESPONSIVE - TABLET ==================== */
 @media screen and (max-width: 63.9375em) {
     .partner-logos {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* ==================== PARTNERS RESPONSIVE - MOBILE ==================== */
+/* ==================== 8.3 PARTNERS RESPONSIVE - MOBILE ==================== */
 @media screen and (max-width: 39.9375em) {
     .partners {
         display: none;
     }
 }
 
-/* ==================== FOOTER SECTION ==================== */
+/* ==========================================================================
+	9. FOOTER SECTION 
+   ========================================================================== */
+
+/* ==================== 9.1 FOOTER BASE ==================== */
 /* Main footer container with dark background */
 .footer {
     background: #0d2d46;
@@ -755,12 +822,15 @@ header {
     );
 }
 
+/* ==================== 9.2 FOOTER TOP ==================== */
 /* Top footer row with avatar and description */
 .footer-top {
     display: flex;
     align-items: center;
     gap: 1.25rem;
     color: #fff;
+    margin: 3rem auto;
+    padding: 2rem;
 }
 
 /* Yellow underline beneath text */
@@ -791,12 +861,13 @@ header {
 .footer-container {
     display: flex;
     gap: 3.125rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     position: relative;
     padding-bottom: 3.75rem !important;
     margin-top: 3.75rem;
 }
 
+/* ==================== 9.3 FOOTER COLUMNS ==================== */
 /* Individual footer column */
 .footer-col {
     display: flex;
@@ -854,26 +925,31 @@ header {
 
 /* Column width distribution */
 .footer-col:nth-child(1) {
-    flex-grow: 1;
+    flex: 2;
 } /* About Us */
+
 .footer-col:nth-child(2) {
-    flex-grow: 0.8;
+    flex: 1;
 } /* Instagram */
+
 .footer-col:nth-child(3) {
-    flex-grow: 2;
+    flex: 3;
 } /* Mastodon */
+
 .footer-col:nth-child(4) {
-    flex-grow: 0.5;
+    flex: 1;
 } /* Track us */
 
-/* ==================== FOOTER COLUMN COLORS ==================== */
+/* ==================== 9.4 FOOTER COLUMN COLORS ==================== */
 /* About column - Yellow heading */
 .footer-col.about h4 {
     color: #ffb901;
 }
+
 .footer-col.about h4::after {
     background: #25c389;
 }
+
 .footer-col.about h4::before {
     border-top: 6px solid #25c389;
 }
@@ -882,9 +958,11 @@ header {
 .footer-col.insta h4 {
     color: #de6262;
 }
+
 .footer-col.insta h4::after {
     background: #19b2de;
 }
+
 .footer-col.insta h4::before {
     border-top: 6px solid #19b2de;
 }
@@ -921,7 +999,7 @@ header {
     color: white;
 }
 
-/* ==================== SOCIAL BOXES ==================== */
+/* ==================== 9.5 SOCIAL BOXES ==================== */
 /* Social media icon boxes container */
 .social-boxes {
     display: flex;
@@ -958,7 +1036,7 @@ header {
     background: #ffb901;
 } /* Yellow */
 
-/* ==================== SUBSCRIBE FORM ==================== */
+/* ==================== 9.6 SUBSCRIBE FORM ==================== */
 /* Email subscription form */
 .subscribe-form {
     display: flex;
@@ -998,13 +1076,14 @@ header {
     height: 1.25rem;
 }
 
-/* ==================== FOOTER RESPONSIVE - TABLET ==================== */
+/* ==================== 9.7 FOOTER RESPONSIVE - TABLET ==================== */
 @media screen and (max-width: 63.9375em) {
     .footer-col {
         flex: 0 0 calc(50% - 25px);
     }
 }
-/* ==================== FOOTER RESPONSIVE - MOBILE ==================== */
+
+/* ==================== 9.8 FOOTER RESPONSIVE - MOBILE ==================== */
 @media screen and (max-width: 39.9375em) {
     .footer-col {
         flex: 0 0 100%;
@@ -1020,9 +1099,13 @@ header {
         padding: 3.75rem 0;
     }
 
+    .footer-col.mastodon {
+        padding: 0 2rem;
+    }
+
     /* Track section positioning on mobile */
     .footer-col.track {
-        margin-left: 8.125rem;
+        margin-left: 10rem;
         padding: 0 1.25rem;
     }
 
