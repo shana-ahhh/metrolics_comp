@@ -119,7 +119,7 @@ textarea {
     max-width: 80rem;
     margin: 0 auto;
     width: 100%;
-    padding: 3.125rem;
+    padding: 0 3.125rem;
 }
 
 /* ==================== 1.3 TYPOGRAPHY ==================== */
@@ -136,7 +136,7 @@ h6 {
 
 h1 {
     font-size: 2.125rem;
-    margin: 2rem 0 6rem;
+    margin: 5rem;
     color: #3b3b3b;
 }
 
@@ -169,16 +169,6 @@ footer {
 /* ==========================================================================
 	2. HEADER
    ========================================================================== */
-/* Helper to display empty layout containers */
-div,
-main,
-section,
-footer,
-header {
-    outline: 1px solid #ccc;
-    min-height: 1rem;
-    padding: 1rem;
-}
 
 /* ==================== 2.1 HEADER & NAVIGATION ==================== */
 /* Header: horizontal menu layout on the right side (desktop) */
@@ -303,7 +293,7 @@ header {
     }
 
     .container {
-        padding: 0 1.25rem !important;
+        padding: 1.25rem;
     }
 
     .hero-outer {
@@ -553,6 +543,7 @@ header {
     .services {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.875rem;
+        padding: 0;
     }
 }
 
@@ -688,6 +679,9 @@ header {
 /* ==========================================================================
 	7. WORKS/PORTFOLIO SECTION
    ========================================================================== */
+.works {
+    padding: 3.75rem;
+}
 
 /* ==================== 7.1 WORK GRID==================== */
 /* Portfolio grid - 3 columns on desktop */
@@ -756,6 +750,9 @@ header {
 /* ==========================================================================
 	8. PARTNERS SECTION
    ========================================================================== */
+.partners {
+    margin-bottom: 3.75rem;
+}
 
 /* ==================== 8.1 PARTNER LOGO GRID ==================== */
 /* Partner logos grid - 5 columns on desktop */
@@ -832,6 +829,8 @@ header {
     align-items: center;
     gap: 1.25rem;
     color: #fff;
+    margin: 3rem auto;
+    padding: 2rem;
 }
 
 /* Yellow underline beneath text */
@@ -862,7 +861,7 @@ header {
 .footer-container {
     display: flex;
     gap: 3.125rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     position: relative;
     padding-bottom: 3.75rem !important;
     margin-top: 3.75rem;
@@ -926,16 +925,19 @@ header {
 
 /* Column width distribution */
 .footer-col:nth-child(1) {
-    flex-grow: 1;
+    flex: 2;
 } /* About Us */
+
 .footer-col:nth-child(2) {
-    flex-grow: 0.8;
+    flex: 1;
 } /* Instagram */
+
 .footer-col:nth-child(3) {
-    flex-grow: 2;
+    flex: 3;
 } /* Mastodon */
+
 .footer-col:nth-child(4) {
-    flex-grow: 0.5;
+    flex: 1;
 } /* Track us */
 
 /* ==================== 9.4 FOOTER COLUMN COLORS ==================== */
@@ -943,9 +945,11 @@ header {
 .footer-col.about h4 {
     color: #ffb901;
 }
+
 .footer-col.about h4::after {
     background: #25c389;
 }
+
 .footer-col.about h4::before {
     border-top: 6px solid #25c389;
 }
@@ -954,9 +958,11 @@ header {
 .footer-col.insta h4 {
     color: #de6262;
 }
+
 .footer-col.insta h4::after {
     background: #19b2de;
 }
+
 .footer-col.insta h4::before {
     border-top: 6px solid #19b2de;
 }
@@ -1093,9 +1099,13 @@ header {
         padding: 3.75rem 0;
     }
 
+    .footer-col.mastodon {
+        padding: 0 2rem;
+    }
+
     /* Track section positioning on mobile */
     .footer-col.track {
-        margin-left: 8.125rem;
+        margin-left: 10rem;
         padding: 0 1.25rem;
     }
 
