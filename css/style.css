@@ -251,6 +251,8 @@ header {
     padding: 1.25rem;
     border-bottom: 1px solid #e2e8f0;
     margin: 0 auto;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
   }
 
   .nav-menu {
@@ -277,6 +279,17 @@ header {
 }
 
 /* ==================== RESPONSIVE - MOBILE ==================== */
+@media screen and (max-width: 40em) {
+  .nav-menu {
+    display: none;
+  }
+
+  .logo {
+    font-size: 1.375rem;
+    padding: 1.125rem 1.25rem;
+    margin: 0;
+  }
+}
 
 /* ==================== HERO SECTION ==================== */
 
@@ -404,7 +417,7 @@ header {
 }
 /* ==================== HERO RESPONSIVE - MOBILE ==================== */
 
-@media (max-width: 760px) {
+@media screen and (max-width: 40em) {
   .hero-outer {
     display: none;
   }
@@ -474,19 +487,19 @@ header {
 }
 
 /* Icon color variations */
-.icon.yellow {
+.icon.quaternary {
   border-color: #feb902;
   color: #feb902;
 }
-.icon.green {
+.icon.tertiary {
   border-color: #25c389;
   color: #25c389;
 }
-.icon.red {
+.icon.primary {
   border-color: #de6262;
   color: #de6262;
 }
-.icon.blue {
+.icon.secondary {
   border-color: #19b2de;
   color: #19b2de;
 }
@@ -501,7 +514,7 @@ header {
 
 /* ==================== SERVICES RESPONSIVE - MOBILE ==================== */
 
-@media (max-width: 760px) {
+@media screen and (max-width: 40em) {
   .services {
     grid-template-columns: 1fr;
     gap: 1.5625rem;
@@ -614,7 +627,16 @@ header {
 }
 
 /* ==================== POSTS RESPONSIVE - MOBILE ==================== */
+@media screen and (max-width: 40em) {
+    .posts {
+        grid-template-columns: 1fr;
+    }
 
+    .post:first-child {
+        grid-column: span 1;
+    }
+}
+}
 /* ==================== WORKS/PORTFOLIO SECTION ==================== */
 
 /* Portfolio grid - 3 columns on desktop */
@@ -668,7 +690,15 @@ header {
   }
 }
 /* ==================== WORKS RESPONSIVE - MOBILE ==================== */
+@media screen and (min-width: 40em) {
+        .work-grid {
+        grid-template-columns: 1fr;
+    }
 
+    .work-item img {
+        height: 12.5rem;
+    }
+}
 /* ==================== PARTNERS SECTION ==================== */
 
 /* Partner logos grid - 5 columns on desktop */
@@ -702,7 +732,11 @@ header {
   }
 }
 /* ==================== PARTNERS RESPONSIVE - MOBILE ==================== */
-
+@media screen and (max-width: 40em) {
+        .partners {
+            display: none;
+    }
+}
 /* ==================== FOOTER SECTION ==================== */
 
 /* Main footer container with dark background */
@@ -902,26 +936,26 @@ header {
 }
 
 /* Individual social box */
-.social-boxes .s {
+.social-boxes .box {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 2px;
 }
 
 /* Social box colors */
-.s1 {
+.support {
   background: #265787;
 } /* Blue */
-.s2 {
+.alt {
   background: #de6262;
 } /* Red-orange */
-.s3 {
+.main {
   background: #19b2de;
 } /* Cyan */
-.s4 {
+.accent {
   background: #f6679c;
 } /* Pink */
-.s5 {
+.highlight {
   background: #ffb901;
 } /* Yellow */
 
@@ -973,7 +1007,7 @@ header {
   }
 }
 /* ==================== FOOTER RESPONSIVE - MOBILE ==================== */
-@media screen and (max-width: 39.9375em) {
+@media screen and (max-width: 40em) {
   .footer-col {
     flex: 0 0 100%;
   }
