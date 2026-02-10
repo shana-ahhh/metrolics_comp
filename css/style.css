@@ -65,11 +65,6 @@ html {
     line-height: 1.4;
 }
 
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -638,9 +633,10 @@ footer {
     border-radius: 0 0 2px 2px;
 }
 
-.post-info h4 {
+.post-info h3 {
     margin: 0;
-    font-size: 0.9375rem;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 .post-info span {
@@ -683,6 +679,12 @@ footer {
     padding: 3.75rem;
 }
 
+.work-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
 /* ==================== 7.1 WORK GRID==================== */
 /* Portfolio grid - 3 columns on desktop */
 .work-grid {
@@ -717,7 +719,6 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    text-align: flex-end;
     padding: 1.25rem;
     opacity: 0;
     transform: translateY(100%);
@@ -804,6 +805,12 @@ footer {
     color: #c9d6df;
 }
 
+.footer h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
 /* Colored bottom bar in 4 colors */
 .footer-container::after {
     content: "";
@@ -884,7 +891,7 @@ footer {
 }
 
 /* Column heading styling */
-.footer-col h4 {
+.footer-col h2 {
     position: relative;
     font-size: 1.125rem;
     margin-bottom: 1.25rem;
@@ -893,7 +900,7 @@ footer {
 }
 
 /* Horizontal line under heading */
-.footer-col h4::after {
+.footer-col h2::after {
     content: "";
     position: absolute;
     left: 0;
@@ -903,7 +910,7 @@ footer {
 }
 
 /* Triangle indicator below heading */
-.footer-col h4::before {
+.footer-col h2::before {
     content: "";
     position: absolute;
     bottom: -0.375rem;
@@ -942,55 +949,55 @@ footer {
 
 /* ==================== 9.4 FOOTER COLUMN COLORS ==================== */
 /* About column - Yellow heading */
-.footer-col.about h4 {
+.footer-col.about h2 {
     color: #ffb901;
 }
 
-.footer-col.about h4::after {
+.footer-col.about h2::after {
     background: #25c389;
 }
 
-.footer-col.about h4::before {
+.footer-col.about h2::before {
     border-top: 6px solid #25c389;
 }
 
 /* Instagram column - Red heading */
-.footer-col.insta h4 {
+.footer-col.insta h2 {
     color: #de6262;
 }
 
-.footer-col.insta h4::after {
+.footer-col.insta h2::after {
     background: #19b2de;
 }
 
-.footer-col.insta h4::before {
+.footer-col.insta h2::before {
     border-top: 6px solid #19b2de;
 }
 
 /* Mastodon column - Blue heading */
-.footer-col.mastodon h4 {
+.footer-col.mastodon h2 {
     color: #19b2de;
     text-align: left;
 }
 
-.footer-col.mastodon h4::after {
+.footer-col.mastodon h2::after {
     background: #ffb901;
 }
 
-.footer-col.mastodon h4::before {
+.footer-col.mastodon h2::before {
     border-top: 6px solid #ffb901;
 }
 
 /* Track column - White heading */
-.footer-col.track h4 {
+.footer-col.track h2 {
     color: #ffffff;
 }
 
-.footer-col.track h4::after {
+.footer-col.track h2::after {
     background: #19b2de;
 }
 
-.footer-col.track h4::before {
+.footer-col.track h2::before {
     border-top: 6px solid #19b2de;
 }
 
