@@ -1,7 +1,7 @@
 const bannerImages = [
     "img/Banner1.png",
-    "img/Banner2.png",
-    "img/Banner3.png",
+    "img/Banner2.webp",
+    "img/Banner3.webp",
 ];
 
 let currentIndex = 0;
@@ -19,7 +19,7 @@ updateBanner(currentIndex);
 
 btnLeft.addEventListener("click", () => {
     currentIndex =
-    (currentIndex - 1 + bannerImages.length) % bannerImages.length;
+        (currentIndex - 1 + bannerImages.length) % bannerImages.length;
     updateBanner(currentIndex);
 });
 
